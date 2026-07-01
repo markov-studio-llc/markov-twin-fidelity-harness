@@ -1,0 +1,21 @@
+{
+  "case": 1,
+  "name": "friction_incline_sliding",
+  "configured_inputs": {
+    "theta_deg": 30.0,
+    "mu": 0.15,
+    "g": 9.81,
+    "duration_s": 2.0,
+    "timestep_s": 0.001,
+    "n_samples": 2000,
+    "settle_time_excluded_from_fit_s": 0.3
+  },
+  "analytical_value_m_s2": 3.630643618331198,
+  "measured_value_m_s2": 3.630461136708021,
+  "fit_quality_r_squared": 0.9999999993248466,
+  "fit_initial_position_m": 0.0014530354879266911,
+  "fit_initial_velocity_m_s": 0.004803950405117607,
+  "relative_error": 5.026150797496853e-05,
+  "tolerance_relative_error": 0.01,
+  "verdict": "reproduced"
+}
