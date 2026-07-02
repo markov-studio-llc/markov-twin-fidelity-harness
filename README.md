@@ -94,6 +94,23 @@ python -m harness.run      # run both cases, print + write results/*.json
 
 Runs in well under a minute on a laptop CPU. No GPU, no cloud, no cost.
 
+## Tests
+
+```
+pip install -r requirements-dev.txt
+pytest                     # 28 tests: unit (analytical + models) + integration
+pytest -m "not integration"  # unit-only, skips the MuJoCo runs
+```
+
+The suite is deliberately weighted toward `tests/test_analytical.py` — those
+check the closed-form grader itself (against hand-computed values and physics
+invariants like the damping-ratio round-trip), because that module is the
+ground truth every verdict is measured against. `tests/test_harness.py` runs
+both cases end-to-end and pins the published verdicts; note that the Case 2
+test asserts the verdict is *deviation-flagged* — that is the honesty guard,
+so a change that silently tuned the solver until Case 2 "passed" would fail
+the suite, which is the intent.
+
 ## Limits, stated plainly
 
 - Two cases, both single-body. This is a floor check, not a general
