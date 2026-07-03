@@ -120,5 +120,5 @@ the suite, which is the intent.
   actually hold impedance constant during a contact. The 9.3% gap is
   expected to move if the target `e`, ball mass, or contact stiffness
   change -- it is not a fixed "MuJoCo is always off by 9.3%" constant.
-- Nothing here has been pushed anywhere or posted anywhere. This is the
-  BUILD step; publishing is a separate, deliberate step after review.
+- Published as the Cycle-1 build artifact; the accompanying build-in-public
+  note is authored and reviewed separately.
